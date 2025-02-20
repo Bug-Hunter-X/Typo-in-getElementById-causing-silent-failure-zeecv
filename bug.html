@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+
+  <script>
+    // Incorrectly attempting to access a non-existent element
+    let myElement = document.getElementByIdx('myDiv'); //Typo in method name
+    if (myElement) {
+      myElement.innerHTML = "Text changed!";
+    } else {
+      console.error('Element not found!');
+    }
+  </script>
+</body>
+</html>
